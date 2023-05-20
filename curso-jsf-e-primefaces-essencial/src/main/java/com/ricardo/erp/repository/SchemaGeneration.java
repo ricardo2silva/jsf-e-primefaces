@@ -1,4 +1,4 @@
-package com.ricardo.erp.repositories;
+package com.ricardo.erp.repository;
 
 import java.util.List;
 

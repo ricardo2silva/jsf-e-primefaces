@@ -3,7 +3,7 @@ package com.ricardo.erp.enums;
 public enum TipoEmpresa {
 	
 	MEI("Microempreendedor Individual"),
-	EIRELLI("Empresa Individual de Responsabilidade Limitada"),
+	EIRELI("Empresa Individual de Responsabilidade Limitada"),
 	LTDA("Sociedade Limitada"),
 	SA("Sociedade Anonima");
 	

@@ -37,7 +37,7 @@ public class Empresa implements Serializable {
 	private String cnpj;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "data_fundação")
+	@Column(name = "data_fundacao")
 	private Date dataFundacao;
 	
 	@ManyToOne
