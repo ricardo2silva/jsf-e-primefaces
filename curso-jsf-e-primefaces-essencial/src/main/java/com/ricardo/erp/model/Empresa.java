@@ -40,6 +40,14 @@ public class Empresa implements Serializable {
 	@Column(name = "data_fundacao")
 	private Date dataFundacao;
 	
+	public TipoEmpresa getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoEmpresa tipo) {
+		this.tipo = tipo;
+	}
+
 	@ManyToOne
 	@JoinColumn(name = "ramo_atividade_id", nullable = false)
 	private RamoAtividade ramoAtividade;
