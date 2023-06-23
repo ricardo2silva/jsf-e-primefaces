@@ -39,5 +39,12 @@ public class GestaoEmpresasBean implements Serializable {
 	public void limparFormulario() {
 		empresa = new Empresa();
 	}
+	
+	
+	public String ajuda() {
+		// senão colocamos faces-redirect= true o browser não consegue identificar a mudançã de página
+		//pois ocorre a navegação implicita, dessa forma tornamos a navegação implicita mudando a url da página 
+		return "AjudaGestaoEmpresas?faces-redirect=true";
+	}
 	 
 }

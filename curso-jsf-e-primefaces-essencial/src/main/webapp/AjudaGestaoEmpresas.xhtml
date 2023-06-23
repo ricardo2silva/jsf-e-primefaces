@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- configurando nossos namespaces -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<h:head>
+		<meta charset="UTF-8"/>
+		<title>Ajuda</title>
+		<!-- parecido com tag style  -->
+		<h:outputStylesheet library="algaworks" name="estilo.css"/>
+	</h:head>
+	<h:body>
+		<header>
+			<h:graphicImage library="algaworks" name="logo.png"/>
+		</header>
+		<h2>Ajuda</h2>
+		<div id="conteudo">
+			<!-- gera um formulario -->
+			<h:form>
+				<p>Está é a ajuda da página de cadastro de empresas</p>
+				<h:commandLink value="Voltar" action="GestaoEmpresas?faces-redirect=true"/>
+				<!-- quando colocamos no action o nome do xhtml sem a sua extensao ele redireciona para á página -->
+			</h:form>
+		</div> 
+		
+		
+		<footer>Curso online "JSF e PrimeFaces essencial"</footer>
+	</h:body>
+</html>
