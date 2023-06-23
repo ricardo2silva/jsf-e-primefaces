@@ -19,20 +19,19 @@
 				<h:panelGrid columns="2"><!-- gera uma tabela e estamos definindo quantidade de colunas -->
 					
 					<h:outputLabel value="Razão social: " for="razaoSocial"/><!-- quando clicamos na label o for vai focar no input -->
-					<h:inputText id="razaoSocial" value=""/>
+					<h:inputText id="razaoSocial" value="#{gestaoEmpresasBean.empresa.razaoSocial}"/>
 					
 					<h:outputLabel value="Nome Fantasia: " for="nomeFantasia"/>
-					<h:inputText id="nomeFantasia" value=""/>
+					<h:inputText id="nomeFantasia" value="#{gestaoEmpresasBean.empresa.nomeFantasia}"/>
 					
 					<h:outputLabel value="Tipo Empresa: " for="tipo"/>
-					<h:selectOneMenu id="tipo">
+					<h:selectOneMenu id="tipo" value="#{gestaoEmpresasBean.empresa.tipo}">
 						<f:selectItem itemLabel="Selecione..."/>
-						<f:selectItem itemLabel="MEI"  itemValue="MEI"/>
-						<f:selectItem itemLabel="LTDA" itemValue="LTDA"/>
+						<f:selectItems value="#{gestaoEmpresasBean.tiposEmpresa}" var="tipoEmpresa" itemLabel="#{tipoEmpresa.descricao}" itemValue="#{tipoEmpresa}" />
 					</h:selectOneMenu>
 					
 					<h:outputLabel/>
-					<h:commandButton value="Salvar"/>
+					<h:commandButton value="Salvar" actionListener="#{gestaoEmpresasBean.salvar}"/>
 					<!-- responsavel por listar as informações -->
 					<h:dataTable>
 						<h:column>

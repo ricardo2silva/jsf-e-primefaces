@@ -2,25 +2,42 @@ package com.ricardo.erp.controller;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
-import javax.faces.bean.ViewScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
-@Named// com esta anotation definimos essa classe acessivel aqualquer xhtml
-//@RequestScoped // essa instancia é inicializada quando requisitada e finalizada quando a requisição termina
-//@ViewScoped // o ciclo de vida é maior, poder durar uma sessao 
-@SessionScoped // somente na proxima sessão ele inicializa
+import com.ricardo.erp.enums.TipoEmpresa;
+import com.ricardo.erp.model.Empresa;
+
+@Named
+@ViewScoped
 public class GestaoEmpresasBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private static Integer NUMERO = 0;
+	private Empresa empresa = new Empresa();
 	
-	public GestaoEmpresasBean() {
-		NUMERO++;
-	}
-	public Integer getNumero() {
-		return NUMERO;
+
+	public Empresa getEmpresa() {
+		return empresa;
 	}
 	
+
+	
+	public TipoEmpresa[] getTiposEmpresa() {
+		return TipoEmpresa.values();
+	}
+	
+	
+	public void salvar() { 
+		System.out.println("Razao social: " + empresa.getRazaoSocial()); 
+		System.out.println("Nome Fantasia: " + empresa.getNomeFantasia());
+		System.out.println("Tipo Empresa: " + empresa.getTipo());
+		
+		limparFormulario();
+	}
+	
+	public void limparFormulario() {
+		empresa = new Empresa();
+	}
+	 
 }
