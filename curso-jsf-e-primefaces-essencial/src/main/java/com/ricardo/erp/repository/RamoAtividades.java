@@ -1,4 +1,4 @@
-package com.ricardo.erp.repository;
+	package com.ricardo.erp.repository;
 
 import java.io.Serializable;
 import java.util.List;

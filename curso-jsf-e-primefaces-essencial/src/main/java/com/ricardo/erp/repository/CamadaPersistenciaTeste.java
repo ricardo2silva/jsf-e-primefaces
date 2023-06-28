@@ -47,6 +47,8 @@ public class CamadaPersistenciaTeste {
 		List<Empresa> empresaList2 = empresas.pesquisar("");
 		System.out.println(empresaList2);
 		
+	
+		
 		em.close();
 		emf.close();
 		
